@@ -1,23 +1,17 @@
+import React from 'react';
 import './index.scss';
-import React, { useState } from 'react';
+import { Success } from './components/Success';
+import { Users } from './components/Users';
+
+// Тут список пользователей: https://reqres.in/api/users
 
 function App() {
-    const [count, setCount] = useState(0);
-
-    return (
-        <div className='App'>
-            <div>
-                <h2>Counter:</h2>
-                <h1>{count}</h1>
-                <button onClick={() => setCount(count - 1)} className='minus'>
-                    Minus
-                </button>
-                <button onClick={() => setCount(count + 1)} className='plus'>
-                    Plus
-                </button>
-            </div>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Users />
+      {/* <Success /> */}
+    </div>
+  );
 }
 
 export default App;
